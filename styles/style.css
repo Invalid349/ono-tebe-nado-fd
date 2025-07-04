@@ -1,1 +1,285 @@
-/* место для вашего кода */
+/* header */
+.header{
+    display:grid;
+    grid-template-columns: 1fr min-content 1fr;
+    align-items:center;
+    width:100%;
+    min-height:295px;
+    padding: 0 50px;
+    font-size: 18px;
+}
+.header__links-list{
+    display:flex;
+    column-gap: 28px ;
+    margin-top: -4px;
+}
+.little-bigger-gap{
+    margin-left: 3.5px;
+}
+.header__link{
+    font-size: 18px;
+    line-height: 100%;
+}
+.header__links-list-item_no-bullit{
+    list-style-type: none;
+}
+.header__links-list-item{
+    border-bottom: 1px solid #000000;
+    list-style-type: circle;/* не underline близости линии и текста */
+}
+.header__logo{
+    display: block;
+    min-width:135px;
+    min-height:105px;
+}
+/* только выравнивание адреса, остальное в global .address*/
+.header__address{
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    justify-self: end;
+    min-height:98px;
+}
+.text-address-header{
+    border-bottom: 1px solid #000000;
+    font-style:normal;
+    line-height: 24.3px;/* не underline близости линии и текста */
+}
+.text-address-header-no-underline{
+    font-style:normal;
+    line-height: 24.3px;
+}
+/* cover */
+.cover {
+    /* оформление фона */
+    position: relative; /*для абсолютного позиционирования черного фона */
+    z-index:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 757px;
+    padding:50px;
+    background-image: url(../images/cover.jpg);
+    background-position: center;
+    background-size: cover; /*растягивает под блок */
+    }
+
+.cover::before {
+    content: ''; /* обязательно */
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index:2;
+    width: 100%;
+    height: 100%; 
+    opacity: 0.6;
+    background-color: #000000;
+    }
+.cover * {
+    z-index:3;
+    color: #fff;
+}
+.cover__title{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    min-height: 485px;
+    margin:auto 0;
+    padding-top: 54px;
+
+    
+}
+.aligned-text{
+    display: block;
+    margin-right: -0.3em;   /* из-за letter-spacing */
+    font-size: 100px;
+    line-height: 115%;
+    letter-spacing:0.3em;
+    text-transform: uppercase;
+}
+.aligned-text_center{
+    text-align: center;
+}
+.aligned-text_right{
+    text-align: right;
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 51px;
+    font-size: 22px;
+}
+.cover__description-text{
+    text-transform: uppercase;
+    word-spacing:0.85em;
+}
+.bet-button{
+    align-self: stretch;
+    min-width: 256px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+/* lots */
+.lots{
+    width:100%;
+    min-height:723px;
+    margin: 180px 0 0 0;
+    padding: 0 24px;
+}
+.lots-naming{
+    padding-left: 40px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.lot-cards{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    column-gap: 25px;
+    width:100%;
+    height:596px;
+    margin-top: 27px;
+    color:#fff;
+}
+.card{
+    width:100%;
+    height:100%;
+    list-style: none;
+    background-color: rgb(237, 149, 16);
+}
+.card a{
+    display: block;
+    width:100%;
+    height:100%;
+}
+.card-about-film{
+    background-image: url(../images/card-lot-01.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card-about-book{
+    background-image: url(../images/card-lot-02.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card-about-picture{
+    background-image: url(../images/card-lot-03.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    height:100%;
+    padding: 48px 40px;
+}
+.card-naming{
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.card-text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+}
+.show-more{
+    display: inline-block;
+    margin:30px 0 0 40px;
+    border-bottom: 1px solid #000000;
+    font-weight: 400;
+    font-size: 20px;
+}
+/* about */
+.about{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 54%;
+    width:100%;
+    min-height: 595px;
+    margin: 120px 0 0 0;
+    padding: 0 24px;
+}
+.about-logo{
+    align-self: end;
+    width: 240px;
+    height:240px;
+    margin: 0 0 0 47px;
+    border-radius: 50%;
+    padding: 64px 46px 0 46px;
+    background-color: #000000;
+}
+.about-naming{
+    margin: 134px 0 0 8px;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.about-text-block{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 9px 1px 3px 9px;
+    letter-spacing:0.0004em;
+}
+.about-text-start{
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.about-text-end{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+/* footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 180px;
+    margin: 180px 0 0 0;
+    padding: 0 50px;
+}
+.footer__links-list-item{
+    border-bottom: 1px solid #000000;/* не underline близости линии и текста */
+}
+.footer__links-list{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+}
+.block-image-footer{
+    display: flex;
+    justify-content: space-between;
+    width:240px;
+}
+.image-footer{
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+.text-address-footer{
+    border-bottom: 1px solid #000000;
+    font-weight: 400;
+    font-size: 18px;
+    font-style:normal;
+    line-height: 24.3px;
+    text-decoration: none;/* не underline близости линии и текста */
+}
+.text-address-footer-no-underline{
+    font-weight: 400;
+    font-size: 18px;
+    font-style:normal;
+    line-height: 24.3px;
+}
+.footer__link{
+    font-size: 18px;
+    line-height: 115%;
+}
