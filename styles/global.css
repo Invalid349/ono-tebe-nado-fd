@@ -7,7 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  overflow: hidden;
   width: 1100px;
   margin: 0 auto;
   font-family: Raleway, sans-serif;
