@@ -219,7 +219,7 @@
     padding: 0 24px;
 }
 .about-logo {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     align-self: end;
@@ -246,7 +246,7 @@
     grid-column: 2;
     grid-row: 2;
     row-gap: 24px;
-    padding: 7px 2px 0 8px; 
+    padding: 7px 2px 0 8px;
 }
 .about-text-item {
     font-weight: 400;
