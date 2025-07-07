@@ -227,7 +227,6 @@
     height: 240px;
     margin: 35px 0 0 47px;
     border-radius: 50%;
-    padding: 0px auto 0 auto;
     background-color: #000000;
 }
 .about__logo-image {
@@ -260,19 +259,19 @@
     justify-content: space-between;
     width: 100%;
     margin: 180px 0 0 0;
-    padding: 2px 49px;
+    padding: 2px 49px 81px 49px;
 }
 .position__address_footer {
     margin: 0px 0 0 1px;
-}
-.footer__link__active {
-    text-decoration: none;
 }
 .footer__link {
     font-size: 18px;
     line-height: 115%;
     text-decoration: 1px underline;
     text-underline-offset: 4px;
+}
+.footer__link__active {
+    text-decoration: none;
 }
 .footer__links {
     display: flex;
